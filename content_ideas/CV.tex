@@ -1,0 +1,189 @@
+\documentclass[11pt,a4paper]{article}
+
+%==================== Packages ====================%
+\usepackage{fontspec}
+\setmainfont{Latin Modern Roman}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+
+%==================== Page layout ====================%
+\geometry{
+  left=2cm,
+  right=2cm,
+  top=2cm,
+  bottom=2cm
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+
+%==================== Color ====================%
+\definecolor{slate}{RGB}{60,75,90}
+
+%==================== Links ====================%
+\hypersetup{
+  colorlinks=true,
+  linkcolor=slate,
+  urlcolor=slate,
+  citecolor=slate,
+  pdftitle={Curriculum Vitae -- Luke Staszewski},
+  pdfauthor={Luke John Staszewski}
+}
+
+%==================== Header / Footer ====================%
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\color{slate} -- \thepage/\pageref{LastPage} --}
+
+
+%==================== Section formatting ====================%
+\titleformat{\section}
+  {\Large\bfseries\color{slate}}
+  {}
+  {0pt}
+  {}
+  [\color{slate}\titlerule]
+
+\titlespacing{\section}{0pt}{1.2em}{0.6em}
+
+%==================== Lists ====================%
+\setlist[itemize]{
+  leftmargin=1.5em,
+  itemsep=0.3em,
+  label=\textcolor{slate}{\textbullet}
+}
+
+%==================== Document ====================%
+\begin{document}
+
+% Optional photograph: place Photo.JPG in the project directory to enable it.
+\IfFileExists{Photo.JPG}{%
+  \begin{textblock*}{2cm}(16.8cm,1.0cm)
+    \includegraphics[width=2cm]{Photo.JPG}
+  \end{textblock*}
+}{}
+
+%==================== Header ====================%
+\begin{center}
+    {\Huge \textbf{\color{slate} Luke Staszewski}}\\[0.4em]
+    Dresden, Germany \;|\;
+    (+44)~7400451242 \;|\;
+    \href{mailto:lstaszewski@pks.mpg.de}{lstaszewski@pks.mpg.de}
+\end{center}
+
+\vspace{1em}
+
+%==================== Education ====================%
+\vspace{-1.0cm}
+\section{Education}
+
+\textbf{Max Planck Institute for the Physics of Complex Systems} \hfill \textit{Oct 2022 -- Present}\\
+\textbf{PhD Candidate, Condensed Matter Physics}\\
+Supervisors: Alexander Wietek, Roderich Moessner\\
+Research focus: Numerical techniques for low-dimensional quantum materials
+
+\textbf{University of Cambridge (King’s College)} \hfill \textit{2017 -- 2021}\\
+\textbf{BA \& MSci Physical Natural Sciences}\\
+Part III: Class I (79.5/100)\\
+Part II, IB, IA: Class I
+
+\textbf{Devonport High School for Boys} \hfill \textit{2010 -- 2017}\\
+{A-Level:} Maths ($A^*$), Further Maths ($A^*$), Physics ($A^*$), Chemistry ($A^*$), German ($B$)
+
+{GCSE:} Further Maths ($A^{**}$), Maths ($A^*$), Physics ($A^*$), German ($A^*$), Chemistry ($A^*$),
+Biology ($A^*$), English ($A^*$), Media Studies ($A^*$), Product Design ($A^*$),
+IT ($A^*$), Business Studies ($A^*$), Art ($A$)
+
+% \textbf{Eton College — Summer School} \hfill \textit{Summer 2016}\\
+% University preparatory courses in mathematics and physics
+
+%==================== Technical Skills ====================%
+\section{Technical Skills}
+
+\textbf{Programming:} Python, C++, Julia\\
+\textbf{Scientific Computing:} Exact diagonalisation, numerical many-body methods\\
+\textbf{Projects:} Contributor to \textit{XDiag}, a high-performance C++ library for exact diagonalisation of quantum Hamiltonians: \href{https://github.com/awietek/xdiag}{github.com/awietek/xdiag} \\
+\textbf{Languages:} German (B2 Telc qualification)\\
+
+%==================== Teaching ====================%
+\section{Teaching Experience}
+
+\textbf{Full-Time Tutor} \hfill \textit{2021 -- 2022}\\
+Mathematics and physics tutor from secondary to undergraduate level. Courses included condensed matter physics, electromagnetism, fluid dynamics, and mathematical physics. Supported multiple successful Cambridge and Oxford physics applicants.
+
+\textbf{Undergraduate Teaching (German)} \hfill \textit{Oct 2024 -- Present}\\
+Supervisor for undergraduate physics practicals at Technische Universität Dresden (Grundpraktikum II), taught in German.
+
+%==================== Publications ====================%
+\newpage
+% \nobibliography{publications}
+% \vspace{-1.5cm}
+
+\section*{Publications and Preprints}
+
+\begin{itemize}
+\item \textbf{L.~Staszewski} and A.~Wietek (2025).
+\textit{Quench dynamics of stripes and phase separation in the two-dimensional $t$--$J$ model}.
+\href{https://doi.org/10.1103/nfmp-32tt}{Phys. Rev. B \textbf{112}, 035125.}
+
+\item \textbf{L.~Staszewski}, A.~Haldar, P.~W.~Claeys, and A.~Wietek (2026).
+\textit{Krylov space dynamics of ergodic and dynamically frozen Floquet systems}.
+\href{https://doi.org/10.1103/3vgd-y39w}{Phys.\ Rev.\ B \textbf{113}, 165144.}
+
+\item A.~Wietek, \textbf{L.~Staszewski}, M.~Ulaga, P.~L.~Ebert, H.~Karlsson, S.~Sarkar, L.~Shackleton, A.~Sinha, and R.~D.~Soares (2026).
+\textit{XDiag: Exact Diagonalization for Quantum Many-Body Systems}.
+\href{https://doi.org/10.21468/SciPostPhysCodeb.70}{SciPost Phys. Codebases \textbf{70}.}
+
+\item A.~Haldar, A.~Das, S.~Chaudhuri, \textbf{L.~Staszewski}, A.~Wietek, F.~Pollmann, R.~Moessner, and A.~Das (2024).
+\textit{Dynamical freezing in the thermodynamic limit: the strongly driven ensemble}.
+\href{https://arxiv.org/abs/2410.11050}{arXiv:2410.11050.}
+
+
+\item
+R.~D.~Soares\textsuperscript{$\dagger$},
+\textbf{L.~Staszewski}\textsuperscript{$\dagger$}, C.~Feng and A.~Wietek.
+``Excitonic Stripe Order in the Two-Orbital Hubbard--Kanamori Model''.
+\href{https://arxiv.org/abs/2609.36051}{arXiv:2609.36051}, 2026.
+
+% Experimental manuscript (uncomment when ready to include):
+\item
+B.~Oreg, C.~Turnbaugh, \textbf{L.~Staszewski}, M.~Ulaga, J.~Hertkorn, Z.~Xu, A.~Wietek and M.~Zwierlein.
+``Probing pairing spectra using Feshbach spectroscopy of the
+attractive Hubbard model''. Manuscript in preparation.
+
+
+
+\end{itemize}
+
+
+%==================== Additional ====================%
+\section{Additional Information}
+
+\textbf{Awards:} King’s Scholar (University of Cambridge)\\
+\textbf{Extra-Curricular:} Duke of Edinburgh Award — Bronze, Silver, Gold\\
+\textbf{Summer Schools and Conferences:} 
+\begin{itemize}
+  \item 2024 Les Houches: 8th School for Computational Physics  
+  \item 2025 GRC Superconductivity: Les Diablerets Conference Center
+  \item 2024-2026 DPG: Spring Meetings
+\end{itemize}
+% \href{https://comp-quant-2024.sciencesconf.org/resource/gallery/id/7}{Variational Approaches for Quantum Matter}
+
+\vfill
+\begin{flushright}
+  \includegraphics[width=4.5cm,trim=350bp 0bp 450bp 0bp,clip]{plots/misc/Signature.pdf}\\[0.3em]
+  Luke John Staszewski
+\end{flushright}
+
+\end{document}
